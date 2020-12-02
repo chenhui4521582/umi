@@ -7,6 +7,8 @@ import { queryMenus } from '@/services/global'
 import { FolderOutlined, LogoutOutlined, UserOutlined, EditOutlined } from '@ant-design/icons';
 import { getMenuData } from './menu'
 import '@/assets/global.less'
+import locale from 'antd/lib/date-picker/locale/zh_CN';
+import 'moment/locale/zh-cn';
 export default (props: IRouteComponentProps) => {
   const [menus, setMenus] = useState<MenuDataItem[]>([]);
   useEffect(() => {

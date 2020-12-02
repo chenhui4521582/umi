@@ -1,7 +1,5 @@
 import React from 'react';
 import {Card, DatePicker, Form, Row, Col, Button, Divider} from 'antd'
-import 'moment/locale/zh-cn';
-import locale from 'antd/lib/date-picker/locale/zh_CN';
 export default () => {
   const onChange = () => {
 

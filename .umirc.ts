@@ -1,10 +1,16 @@
-import { defineConfig } from 'umi';
 
+import { defineConfig } from 'umi';
+import control from './src/routes/control'
+import hook from './src/routes/hook'
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
   dynamicImport: {},
+  // 开启暗色主题
+  antd: {
+    dark: false
+  },
   polyfill: {
     imports: [
       'core-js/features/promise/try',
@@ -15,36 +21,8 @@ export default defineConfig({
     { path: '/', 
       component: '@/layouts/BasicLayout',
       routes: [
-        {
-          path: '/',
-          exact: true,
-          component: '@/pages/index/index'
-        },
-        {
-          path: '/control/dropdown',
-          exact: true,
-          component: '@/pages/control/dropdown/'
-        },
-        {
-          path: '/control/cascader',
-          exact: true,
-          component: '@/pages/control/cascader/'
-        },
-        {
-          path: '/control/select',
-          exact: true,
-          component: '@/pages/control/select/'
-        },
-        {
-          path: '/control/table',
-          exact: true,
-          component: '@/pages/control/table/'
-        },
-        {
-          path: '/control/dataPicker',
-          exact: true,
-          component: '@/pages/control/dataPicker/'
-        }
+        ...control,
+        ...hook
       ]
     },
   ],
