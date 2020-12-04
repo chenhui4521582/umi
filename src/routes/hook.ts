@@ -18,6 +18,11 @@ const routes = [
     path: '/hook/memo',
     exact: true,
     component: '@/pages/hook/memo/'
+  },
+  {
+    path: '/hook/ref',
+    exact: true,
+    component: '@/pages/hook/ref/'
   }
 ]
 export default routes;
