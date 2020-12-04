@@ -1,12 +1,18 @@
 import React, { useState, useMemo } from 'react'
 import { Card, Divider, Button } from 'antd'
+import { useWatch } from '@/utils/watch'
 
 export default () => {
   const [num, setNum] = useState<number>(0);
   /** 计算方法 **/
   let computed_num = useMemo((): String | Number => {
     return `计算属性: ${num + 1}`
-  },[num])
+  }, [num])
+  
+  useWatch(num, (newValue, prevValue) => {
+    console.log('prevValue: ', prevValue);
+    console.log('newValue: ', newValue);
+  })
 
   return (
     <Card
