@@ -31,7 +31,8 @@ export async function queryMenus() {
                 "children":[
                   {"name":"useState","code":null,"icon":null,"path":"state","children":null},
                   {"name":"useEffect","code":null,"icon":null,"path":"effect","children":null},
-                  {"name":"useReducer","code":null,"icon":null,"path":"reducer","children":null}
+                  {"name":"useReducer","code":null,"icon":null,"path":"reducer","children":null},
+                  {"name":"useMemo","code":null,"icon":null,"path":"memo","children":null}
                 ]
               },
               {

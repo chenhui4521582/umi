@@ -8,7 +8,7 @@ import style from './style.less'
 *  1. 当子组件不想跟着父组件频繁更新的时候，
 *   1.1 使用memo包裹，父组件更新时，不会发生更新
 *   1.2 当子组件引用父组件的方法时， 使用useCallback包裹,父组件更新时，不会发生更新
-*  2. 当子组件内引用父组件方法的时候，父组件可以使用useMemo让子组件不跟父组件一起更新
+*  2. 当组件内部使用计算方法的时候，使用useMemo可以让不是当前方法内字段发送变动,不调用当前方法
 */
 
 export default (prop: any) => {
@@ -35,6 +35,7 @@ export default (prop: any) => {
         <div>
           <input type="text" value={val} onChange={event => setValue(event.target.value)}/>
           <button onClick={() => setCount(count + 1)}>count+1</button>
+          <div className={style.background}></div>
           <Divider />
           <MemoChild name={name} setName={cb_setName}/>  
         </div>

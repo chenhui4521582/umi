@@ -13,6 +13,11 @@ const routes = [
     path: '/hook/reducer',
     exact: true,
     component: '@/pages/hook/reducer/'
+  },
+  {
+    path: '/hook/memo',
+    exact: true,
+    component: '@/pages/hook/memo/'
   }
 ]
 export default routes;
